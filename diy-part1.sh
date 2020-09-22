@@ -21,7 +21,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 echo '添加OpenAppFilter过滤器'
 git clone $filter_url package/OpenAppFilter
-echo 'CONFIG_PACKAGE_luci-app-oaf=y' >> R619AC.config
-echo 'CONFIG_PACKAGE_kmod-oaf=y' >> R619AC.config
-echo 'CONFIG_PACKAGE_appfilter=y' >> R619AC.config
-echo 'CONFIG_PACKAGE_luci-i18n-oaf-zh-cn=y'  >> R619AC.config
+echo 'CONFIG_PACKAGE_luci-app-oaf=y' >> r619ac.config
+echo 'CONFIG_PACKAGE_kmod-oaf=y' >> r619ac.config
+echo 'CONFIG_PACKAGE_appfilter=y' >> r619ac.config
+echo 'CONFIG_PACKAGE_luci-i18n-oaf-zh-cn=y'  >> r619ac.config
