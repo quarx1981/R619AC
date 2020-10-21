@@ -16,7 +16,7 @@ on:
 #    branches:
 #      - master
 #    paths:
-#      - 'r619ac.config'
+#      - '.config'
 #  schedule:
 #    - cron: 30 4 */20 * *
 #          分 时 日 月 周5
@@ -28,7 +28,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: r619ac.config
+  CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
@@ -188,7 +188,7 @@ jobs:
         cd package
         git clone https://github.com/destan19/OpenAppFilter.git
         cd -
-        echo "CONFIG_PACKAGE_appfilter=y" >>r619ac.config
-        echo "CONFIG_PACKAGE_kmod-oaf=y" >>r619ac.config
-        echo "CONFIG_PACKAGE_luci-i18n-oaf-zh-cn=y" >>r619ac.config
-        echo "CONFIG_PACKAGE_luci-app-oaf=y" >>r619ac.config:  
+        echo "CONFIG_PACKAGE_appfilter=y" >>.config
+        echo "CONFIG_PACKAGE_kmod-oaf=y" >>.config
+        echo "CONFIG_PACKAGE_luci-i18n-oaf-zh-cn=y" >>.config
+        echo "CONFIG_PACKAGE_luci-app-oaf=y" >>.config:  
