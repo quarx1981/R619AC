@@ -37,6 +37,7 @@ env:
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
+  OpenAppFilter: true
   TZ: Asia/Shanghai
 
 jobs:
@@ -177,3 +178,17 @@ jobs:
         body: 🚀 GitHub Automated Build | 自动编译
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
+        
+    - name: OpenAppFilter
+      run: |
+        make defconfig
+        rm package/lean/luci-app-flowoffload -fr
+        rm package/lean/shortcut-fe/ -fr
+        rm package/lean/luci-app-sfe/ -fr
+        cd package
+        git clone https://github.com/destan19/OpenAppFilter.git
+        cd -
+        echo "CONFIG_PACKAGE_appfilter=y" >>r619ac.config
+        echo "CONFIG_PACKAGE_kmod-oaf=y" >>r619ac.config
+        echo "CONFIG_PACKAGE_luci-i18n-oaf-zh-cn=y" >>r619ac.config
+        echo "CONFIG_PACKAGE_luci-app-oaf=y" >>r619ac.config:  
