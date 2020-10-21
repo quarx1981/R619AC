@@ -9,8 +9,6 @@
 # ACRH17 KERNEL 5.4
 #=============================================================
 
-# filter_url='https://github.com/destan19/OpenAppFilter.git'       # AppFilter 地址
-
 # 启用 fw876/helloworld
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
@@ -18,5 +16,3 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # sed -i '$a src-git lienol https://github.com/xiaorouji/openwrt-package' feeds.conf.default
 
 # git clone https://github.com/kenzok8/small.git
-
-git clone https://github.com/destan19/OpenAppFilter.git
