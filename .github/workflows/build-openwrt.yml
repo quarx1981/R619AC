@@ -181,7 +181,6 @@ jobs:
         
     - name: OpenAppFilter
       run: |
-        make defconfig
         rm package/lean/luci-app-flowoffload -fr
         rm package/lean/shortcut-fe/ -fr
         rm package/lean/luci-app-sfe/ -fr
